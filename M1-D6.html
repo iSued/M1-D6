@@ -29,7 +29,7 @@
   <head>
    
     <meta charset="utf-8">
-    <title>The Shop</title>
+    <title id="titolo1">The Shop</title>
     <meta name="Smartphone Shop Website" content="smartphone shop website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,8 +38,11 @@
 
 
 
-  <body>
-    <h1 id="titolo">The Shop</h1>
+  <body id='corpo' onclick="back()">
+    <div>
+    <h1 id="titolo" onclick="myFunction(), super1(), changeTitle" >The Shop</h1>
+    </div>
+  
     
     <table>
       <caption><h2>TOP 5 PRODUCTS</h2></caption>
@@ -89,7 +92,7 @@
   </table>
 
   <div class="container">
-    <form action="action_page.php">
+    <form>
   
       <label for="fname">First Name</label>
       <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -116,17 +119,25 @@
     
   </div>
 
- <footer>The Shop INC.,7 Long road 322<br></footer>
-  Dreamland>
+ <footer id=fine onclick="mask()">The Shop INC.,7 Long road 322<br></footer>
 
 
-  <script>
+
+  <script type="text/javascript">
+  
 function myFunction() {
     document.getElementById("titolo").style.color = "red";
-    document.getElementById("titolo").style.fontFamily = "sans-serif";
-    document.getElementById("titolo").style.textDecoration = "oblique";
-    document.getElementById("titolo").style.color = "orange";
-}
+    };
+    function super1() {
+      document.getElementById("titolo").innerHTML = 'The Super-Shop'
+    };
+    function back(){
+      document.getElementById('corpo').style.background = 'white'
+    };
+    function mask(){
+      document.getElementById("fine").innerHTML = 'The Super-Shop INC.,BLA BLA Super-Long road,Mars'
+    };
+    
 </script>
   </body>
 
